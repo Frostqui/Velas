@@ -1,0 +1,17 @@
+<h1>Listado de velas</h1>
+ 
+<table>
+  <tr>
+    <th>Text</th>
+  </tr>
+ 
+  <% @candles.each do |candle| %>
+    <tr>
+       <td><%= candle.text %></td>
+        <td><%= link_to 'Ver', candle_path(candle) %></td>
+
+         <td><%= link_to 'Eliminar', candle_path(candle),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
