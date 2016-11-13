@@ -4,18 +4,23 @@
    <div class="col s12 m7">
       <div class="card horizontal">
       <div class="card-image">
-        <img src="http://lorempixel.com/100/190/nature/6">
+        <img height="160px" src="http://i944.photobucket.com/albums/ad286/TiCa_photos/animated_candle.gif">
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p><%= candle.text %></p>
+          <p><i class="fa fa-quote-left" aria-hidden="true"></i>  <%= candle.text %></p>
         </div>
         <div class="card-action">
-          <%= candle.user.username %>
+        <div class="chip">
+         <img src="http://materializecss.com/images/yuna.jpg" alt="Contact Person">
+          <%= link_to candle.user.username %>
+          </div>
           </br>
+          <div class="candle_right_links right">
           <%= link_to 'Ver', candle_path(candle) %>
            <%= link_to 'Eliminar', candle_path(candle),
                     method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </div>
         </div>
       </div>
     </div>
