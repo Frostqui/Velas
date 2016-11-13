@@ -7,13 +7,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <%= stylesheet_link_tag "home" %>
+   
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+     <%= stylesheet_link_tag "home" %>
 
     <%= yield :head %>
 
@@ -24,12 +26,14 @@
 
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Creavelas</a>
+      <%= link_to "Creavelas", root_path, class:"brand-logo" %></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
      
       
       <% if current_user %> 
   <ul class="right hide-on-med-and-down">
+  <li><%= link_to "Encender vela",'candles/new' , class:"create_candle waves-effect waves-light btn white" %></a></li>
+ 
     <li><%= current_user.username %></li> 
     <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
   </ul> 
