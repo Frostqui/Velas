@@ -3,8 +3,7 @@ class CandlesController < ApplicationController
     end
     
     def create
-        @candle = Candle.new(candle_params)
- 
+        @candle = current_user.candles.new(candle_params) 
         @candle.save
         redirect_to @candle
     end

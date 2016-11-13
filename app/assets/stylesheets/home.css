@@ -1,3 +1,9 @@
+body{
+    background-color: #F1EBF9;
+
+
+}
+
 .logo{
     float:left;
 
@@ -14,6 +20,12 @@
 
 .create_candle{
     color:red;
+
+
+}
+
+.card{
+    background-color: transparent;
 
 
 }

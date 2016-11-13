@@ -1,17 +1,25 @@
-<h1>Listado de velas</h1>
- 
-<table>
-  <tr>
-    <th>Text</th>
-  </tr>
  
   <% @candles.each do |candle| %>
-    <tr>
-       <td><%= candle.text %></td>
-        <td><%= link_to 'Ver', candle_path(candle) %></td>
+     
+   <div class="col s12 m7">
+      <div class="card horizontal">
+      <div class="card-image">
+        <img src="http://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p><%= candle.text %></p>
+        </div>
+        <div class="card-action">
+          <%= candle.user.username %>
+          </br>
+          <%= link_to 'Ver', candle_path(candle) %>
+           <%= link_to 'Eliminar', candle_path(candle),
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    </div>
+  </div>
+   <% end %>
 
-         <td><%= link_to 'Eliminar', candle_path(candle),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+
