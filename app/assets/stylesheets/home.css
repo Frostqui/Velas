@@ -1,5 +1,8 @@
 body{
-    background-color: #F1EBF9;
+background: #EA769C; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #FDCDEC , #EAD6FC); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #FDCDEC , #EAD6FC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: #09051C;
 
 
 }
@@ -47,15 +50,15 @@ body{
 
 .custom_buttom_white{
     font-weight: bold;
-    background-color: #F1EBF9;
-    color: #E71E5A;
+    background-color: #9E68CE;
+    color: white;
 
 }
 
 .custom_buttom_white:hover{
     font-weight: bold;
-    background-color: #E1D8EC;
-    color: #DC134F;
+    background-color: #B783E4;
+    color: white;
 
 }
 
@@ -72,4 +75,45 @@ body{
     background-color: #DC134F;
     color: #E1D8EC;
 
+}
+
+nav{
+    background-color: transparent;
+    box-shadow: none;
+    
+}
+
+.card{
+    background: rgba(255, 255, 255, 0.22);
+}
+
+nav .brand-logo{
+    margin-left: 45px;
+    color: #9E68CE;
+    font-weight: bold;
+
+
+}
+
+@media only screen and (max-width: 992px){
+nav .brand-logo {
+    margin-left:0px;
+}
+}
+
+nav > *{
+   
+    color: #9E68CE;
+    font-weight: bold;
+
+
+}
+
+nav ul a{
+    color: #9E68CE;
+    font-weight: bold;
+}
+
+.icon-menu{
+   color: #9E68CE;
 }
