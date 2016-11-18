@@ -5,7 +5,27 @@ background: linear-gradient(to left, #FDCDEC , #EAD6FC); /* W3C, IE 10+/ Edge, F
 color: #09051C;
 
 
+
+
 }
+
+
+::-webkit-input-placeholder {
+   color: #9E68CE;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #9E68CE;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #9E68CE;  
+}
+
+:-ms-input-placeholder {  
+   color: #9E68CE;  
+}
+
 
 .logo{
     float:left;
@@ -63,14 +83,14 @@ color: #09051C;
 }
 
 
-.custom_buttom_red{
+.custom_buttom_blue{
     font-weight: bold;
     background-color: #E71E5A;
     color:  #F1EBF9;
 
 }
 
-.custom_buttom_red:hover{
+.custom_buttom_blue:hover{
     font-weight: bold;
     background-color: #DC134F;
     color: #E1D8EC;
@@ -84,7 +104,7 @@ nav{
 }
 
 .card{
-    background: rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.35);
 }
 
 nav .brand-logo{
@@ -95,11 +115,6 @@ nav .brand-logo{
 
 }
 
-@media only screen and (max-width: 992px){
-nav .brand-logo {
-    margin-left:0px;
-}
-}
 
 nav > *{
    
@@ -116,4 +131,79 @@ nav ul a{
 
 .icon-menu{
    color: #9E68CE;
+}
+
+
+#session_username{
+    padding-left: 15px;
+    color:black;
+    font-size:1.23em;
+    
+    
+}
+
+#session_password{
+    
+    padding-left: 15px;
+    color:black;
+     font-size:1.23em;
+
+    
+}
+
+.login_container{
+    margin-top: 30px;
+
+}
+
+
+.candle_show{
+    position: relative;
+    margin-top: 15px;
+    background-color: rgba(255,255,255,0.35);
+
+}
+
+.candle_data{
+    width: 83%;   
+   position: absolute;
+   bottom: 15px;
+
+
+}
+
+.spacer{
+    height: 85px;    
+    width: 100%;
+
+}
+
+.date{
+    position: absolute;
+    right: 20px;
+
+
+}
+
+
+.textarea_new{
+   
+    height: 15em;
+}
+
+
+@media only screen and (max-width: 992px){
+nav .brand-logo {
+    margin-left:0px;
+}
+
+
+.date{
+    position: relative;
+    margin-left: 20px;
+    float: left;
+
+
+}
+
 }

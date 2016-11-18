@@ -1,3 +1,43 @@
-<p>
-    <%= @candle.text %>        <%= @candle.user.username %>
-</p>
+<div class="candle_show row">
+
+
+    <div class="col s12 m2 center">
+        <img height="300px" class="responsive-img" src="http://i944.photobucket.com/albums/ad286/TiCa_photos/animated_candle.gif">
+    </div>
+
+    <div class="col s12 m10 candle_text">
+        <p>    
+            <%= @candle.text %>       
+            
+        </p>
+
+        </br>
+
+
+        <div class="spacer"></div>
+    
+        
+
+            <div class="row candle_data">
+                              
+                <div clas="col s12 m6 left">
+                    <div class="chip left">
+                        <img src="http://materializecss.com/images/yuna.jpg" alt="Contact Person">
+                        <%= link_to @candle.user.username %>
+                    </div>
+                
+                
+                </div>
+                <div class="col s12 m6 right">
+                
+                  <div class="date">12/12/1995</div>
+                
+                </div>
+            </div>
+
+        </div>
+    
+
+  
+
+</div>

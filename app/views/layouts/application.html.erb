@@ -7,7 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      
    
@@ -47,8 +47,8 @@
   </ul> 
 <% else %> 
    <ul class="right hide-on-med-and-down">
-    <li><%= link_to "Login", 'login' %></a></li> 
-    <li><%= link_to "Signup", 'signup' %></a></li> 
+    <li><%= link_to "Iniciar sesión", 'login', class:"btn custom_buttom_blue" %></a></li> 
+    <li><%= link_to "Registrarse", 'signup', class:"btn custom_buttom_blue" %></a></li> 
   </ul> 
 <% end %>
 
@@ -61,12 +61,12 @@
     <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
    </div>
    
-   <li><%= link_to "Encender vela",'/candles/new' , class:"create_candle btn custom_buttom_red" %></a></li> 
+   <li><%= link_to "Encender vela",'/candles/new' , class:"create_candle btn custom_buttom_blue" %></a></li> 
     
        
 <% else %> 
-    <li><%= link_to "Login", 'login' %></a></li> 
-    <li><%= link_to "Signup", 'signup' %></a></li> 
+    <li><%= link_to "Iniciar sesión", 'login', class:"btn custom_buttom_blue" %></a></li> 
+    <li><%= link_to "Registrarse", 'signup', class:"btn custom_buttom_blue" %></a></li> 
 <% end %>
 
 
@@ -80,15 +80,7 @@
 
   <div class="container">
         
-    <% content_for :head do %>
-  
- 
-    
-
-
-<% end %>
-
-    <%= yield %>
+        <%= yield %>
 </div>
 
   </body>
