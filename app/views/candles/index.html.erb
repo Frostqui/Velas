@@ -1,4 +1,5 @@
  
+  <div class="container">
   <% @candles.each do |candle| %>
      
    <div class="col s12 m7 candle_show">
@@ -13,7 +14,8 @@
         <div class="card-action">
         <div class="chip">
          <img src="http://materializecss.com/images/yuna.jpg" alt="Contact Person">
-          <%= link_to candle.user.username %>
+        
+          <%= link_to candle.user.username,  user_path(candle.user.username) %></a>
           </div>
           </br>
           <div class="candle_right_links right">
@@ -26,6 +28,7 @@
     </div>
   </div>
    <% end %>
+   </div>
 
 
 

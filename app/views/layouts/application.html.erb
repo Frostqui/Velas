@@ -41,9 +41,12 @@
       <% if current_user %> 
   <ul class="right hide-on-med-and-down">
   <li><%= link_to " Encender vela",'/candles/new' , class:" fa fa-fire create_candle btn custom_buttom_white" %></a></li>
- 
-    <li><%= current_user.username %></li> 
-    <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
+    <li class="user_image">
+        <img width="40px" src="http://materializecss.com/images/yuna.jpg" alt="Contact Person" class="circle responsive-img">
+      </li>
+
+    <li><%= link_to current_user.username,  user_path(current_user) %></a></li>     
+    <li><%= link_to "Cerrar sesión", logout_path, method: "delete" %></li> 
   </ul> 
 <% else %> 
    <ul class="right hide-on-med-and-down">
@@ -58,7 +61,7 @@
    <div class="userView">
     <li><%= link_to current_user.username, 'login' %></a></li>     
     <li><%= link_to current_user.email, 'login' %></a></li>  
-    <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
+    <li><%= link_to "Cerrar sesión", logout_path, method: "delete" %></li> 
    </div>
    
    <li><%= link_to "Encender vela",'/candles/new' , class:"create_candle btn custom_buttom_blue" %></a></li> 
@@ -78,10 +81,9 @@
   </nav>
         
 
-  <div class="container">
         
         <%= yield %>
-</div>
+
 
   </body>
 </html>
